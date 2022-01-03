@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateRoomtypesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('roomtypes', function (Blueprint $table) {
+            $table->id('roomtypes_id');
+            $table->string('roomtypes_name');
+            $table->string('roomtypes_price');
+            $table->string('roomtypes_size');
+            $table->string('roomtypes_desc');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('roomtypes');
+    }
+}
