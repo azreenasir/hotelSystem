@@ -4,14 +4,14 @@ This is a project for ICT502 (DATABASE ENGINEERING)
 
 # Configuration
 
-Install Laravel 
-Install Oracle 11g XE
-Install SQL Developer
+Install Laravel__
+Install Oracle 11g XE__
+Install SQL Developer__
 
 # How to Install Laravel 
 
-Install composer at their website
-Link: https://getcomposer.org/
+Install composer at their website__
+Link: https://getcomposer.org/__
 
 # Install Oracle 11g XE 
 
