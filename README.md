@@ -74,6 +74,25 @@ Open terminal on windows or vscode<br />
 Make sure the path of terminal is the same as the project path<br />
 Copy & Paste this composer command: composer require yajra/laravel-oci8 <br />
 
+You don't need to configure the .env files as I already did it in this project. <br />
+
 Second composer:<br />
+Laravel UI<br />
+Link: https://github.com/laravel/ui<br />
+
+How to install the composer?<br />
+Open terminal on windows or vscode<br />
+Make sure the path of terminal is the same as the project path<br />
+Copy & Paste this composer command: composer require laravel/ui <br />
+
+Once the laravel/ui package has been installed, you may install the frontend scaffolding using the ui Artisan command:<br />
+
+run this command: php artisan ui bootstrap --auth<br />
+Make sure you have install the node packages.<br />
+Link: https://nodejs.org/en/<br />
+Before compiling your CSS, install your project's frontend dependencies using the Node package manager (NPM):<br />
+run this command: npm install & npm run dev
+run this command again  until laravel mix successful: npm run dev
+
 
 
