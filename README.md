@@ -59,6 +59,12 @@ The rest leave it as default. <br />
 Go to main page of this code <br />
 Click code and the dropddown will appear <br />
 Select Download ZIP <br />
+After the download has finish, extract the files.
+
+# Open the source code and install the composer that this project require.
+
+You can navigate to composer.json files to check the composer that we need to install
+
 
 
 
