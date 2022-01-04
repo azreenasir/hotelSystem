@@ -63,10 +63,14 @@ After the download has finish, extract the files.
 
 # Open the source code and install the composer that this project require.
 
-You can navigate to composer.json to check the composer that we need to install
+You can navigate to composer.json to check the composer that we need to install<br />
 
+First composer:<br />
+Laravel OCI8: Oracle DB driver for Laravel<br />
+Link: https://github.com/yajra/laravel-oci8<br />
 
-
+How to install the composer?<br />
+Open terminal on windows or vscode<br />
 
 
 
