@@ -5,7 +5,7 @@ This is a project for ICT502 (DATABASE ENGINEERING)
 # Configuration
 
 Install Laravel__
-Install Oracle 11g XE__
+Install Oracle 11g XE __
 Install SQL Developer__
 
 # How to Install Laravel 
