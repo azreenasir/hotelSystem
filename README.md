@@ -31,7 +31,8 @@ Go to oracle 11gxe and click to run
 It will go to their host to create the database
 Go to application express column and insert the system and password which you install just now
 
-__Configuration___
+(Configuration)
+
 Create new 
 Database username = hotel 
 Application express username = hotel 
