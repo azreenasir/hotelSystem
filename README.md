@@ -71,10 +71,9 @@ Link: https://github.com/yajra/laravel-oci8<br />
 
 How to install the composer?<br />
 Open terminal on windows or vscode<br />
+Make sure the path of terminal is the same as the project path<br />
+Copy & Paste this composer command: composer require yajra/laravel-oci8 <br />
 
-
-
-
-
+Second composer:<br />
 
 
