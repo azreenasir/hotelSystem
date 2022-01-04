@@ -32,11 +32,11 @@ It will go to their host to create the database
 Go to application express column and insert the system and password which you install just now
 
 __Configuration___
-Create new --
-Database username = hotel --
-Application express username = hotel --
-Passowrd = hotel --
-Confirm password = hotel --
+Create new 
+Database username = hotel 
+Application express username = hotel 
+Passowrd = hotel 
+Confirm password = hotel 
 
 Click create workspace
 And you are done
