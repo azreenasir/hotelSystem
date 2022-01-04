@@ -63,7 +63,7 @@ After the download has finish, extract the files.
 
 # Open the source code and install the composer that this project require.
 
-You can navigate to composer.json files to check the composer that we need to install
+You can navigate to composer.json to check the composer that we need to install
 
 
 
