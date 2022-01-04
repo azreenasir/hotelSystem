@@ -91,8 +91,37 @@ run this command: php artisan ui bootstrap --auth<br />
 Make sure you have install the node packages.<br />
 Link: https://nodejs.org/en/<br />
 Before compiling your CSS, install your project's frontend dependencies using the Node package manager (NPM):<br />
-run this command: npm install & npm run dev
-run this command again  until laravel mix successful: npm run dev
+run this command: npm install & npm run dev<br />
+run this command again  until laravel mix successful: npm run dev<br />
+
+
+# Run migration to create table into Oracle database
+
+Open terminal on windows or vscode<br />
+Make sure the path of terminal is the same as the project path<br />
+Run this command: php artisan migrate<br />
+
+# Run the seeder to store Roomtype, and Default User data into Oracle
+
+Open terminal on windows or vscode<br />
+Make sure the path of terminal is the same as the project path<br />
+Run this command: php artisan db:seed<br />
+
+# View and Test the System
+
+Open terminal on windows or vscode<br />
+Make sure the path of terminal is the same as the project path<br />
+Run this command: php artisan serve<br />
+Open the link host given<br />
+
+Login Information<br />
+Manager:<br />
+Manager email: manager@manager.com<br />
+Manager password: password<br />
+
+Employee email: newemp@newemp.com<br />
+Employee password: password<br />
+
 
 
 
