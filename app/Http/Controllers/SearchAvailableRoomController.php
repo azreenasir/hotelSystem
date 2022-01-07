@@ -21,12 +21,19 @@ class SearchAvailableRoomController extends Controller
 
     public function result(Request $request)
     {
-        $time_from = $request->time_from;
-        $time_to = $request->time_to;
+        $checkin_date = $request->checkin_date;
+        $checkout_date = $request->checkout_date;
 
-        $reserved = Reservation::where('checkin_date',  '<=', $time_from)->where('checkout_date', '>=', $time_to)->get();
+        $reserved = Reservation::where('checkin_date',  '<=', $checkin_date)->where('checkout_date', '>=', $checkout_date)->get();
 
-        return view('search.result', compact('reserved'));
+        $rooms = Room::whereNotIn('rooms_id', function($query) use ($checkin_date, $checkout_date) {
+            $query->from('reservations')
+             ->select('rooms_id')
+             ->where('checkin_date', '<', $checkout_date)
+                ->where('checkout_date', '>', $checkin_date);
+         })->get();
+
+        return view('search.result', compact('rooms', 'checkout_date', 'checkin_date'));
 
     }
 

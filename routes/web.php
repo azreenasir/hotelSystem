@@ -18,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 // homepage route
 Route::view('/', 'welcome');
 
+
 // room route
 Route::get('/room', 'App\Http\Controllers\RoomController@index');
 Route::get('/room/{roomtype:roomtypes_id}', 'App\Http\Controllers\RoomController@show');
+
 
 // guest route
 Route::get('/guest', 'App\Http\Controllers\GuestController@index')->name('guest.index');
@@ -41,25 +43,31 @@ Route::delete('/reservation/delete/{reservation:reservation_id}', 'App\Http\Cont
 
 
 // room availability route
-Route::get('/room-available', 'App\Http\Controllers\SearchAvailableRoomController@index')->name('search.index');
+Route::get('/room-available', 'App\Http\Controllers\SearchAvailableRoomController@result')->name('search.index');
 Route::post('/room-available/check', 'App\Http\Controllers\SearchAvailableRoomController@result')->name('search.result');
+
 
 // payments route
 Route::get('/payment/reservation/{reservation:reservation_id}', 'App\Http\Controllers\PaymentController@index')->name('payment.index');
 Route::post('/payment/reservation/', 'App\Http\Controllers\PaymentController@store')->name('payment.store');
+
 
 // admin route
 Route::prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
     Route::resource('/users', 'App\Http\Controllers\Admin\UsersController',['except' => ['show', 'create', 'store']]);
 });
 
+
 // about page route
 Route::view('/about', 'about');
+
 
 // contact page route
 Route::view('/contact', 'contact');
 
+
 Auth::routes();
+
 
 // staff and admin home page
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

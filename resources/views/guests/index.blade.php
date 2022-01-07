@@ -14,14 +14,14 @@
     </div>
     <hr>
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
                     Guest
                 </div>
                 <div class="card-body">
-                    <table class="table">
-                        <thead>
+                    <table class="table table-striped table-dark">
+                        <thead class="text-center">
                             <tr>
                             <th scope="col"># ID</th>
                             <th scope="col">First Name</th>
@@ -32,7 +32,7 @@
                             <th scope="col">Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-center">
                             @foreach ($guests as $guest)
                             <tr>
                                 <th scope="row">{{$guest->guest_id}}</th>

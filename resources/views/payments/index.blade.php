@@ -4,12 +4,9 @@
 
 @section('content')
 <div class="container-fluid">
-    <div class="row justify-content-between ml-4 mr-4">
+    <div class="row justify-content-center">
         <div>
             <h4>Payment</h4>
-        </div>
-        <div>
-            <a href="{{route('reservation.index')}}" class="btn btn-primary">Back</a>
         </div>
     </div>
     <hr>

@@ -3,23 +3,20 @@
 @section('title', 'Reservation List')
 
 @section('content')
-    <div class="row justify-content-between ml-4 mr-4">
+<div class="container-fluid">
+    <div class="row justify-content-center">
         <div>
             <h4>Reservation List</h4>
-            
-        </div>
-        <div>
-            <a href="{{route('reservation.create')}}" class="btn btn-primary">Make Reservation</a>
         </div>
     </div>
     <hr>
-    <div class="row justify-content-center">
-        <div class="col m-2">
+    <div class="row">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Reservation List</div>
 
                 <div class="card-body">
-                    <table class="table">
+                    <table class="table table-striped table-dark">
                         <thead>
                             <tr class="text-center">
                             <th scope="col"># ID</th>
@@ -31,7 +28,6 @@
                             <th scope="col">Days</th>
                             <th scope="col">Total Price</th>
                             <th scope="col">Reservation Status</th>
-                            <th scope="col">Payment</th>
                             <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -47,9 +43,6 @@
                                 <td>{{ \App\Models\Reservation::countDays($reservation) }}</td>
                                 <td>RM: {{ \App\Models\Reservation::totalPrice($reservation) }}</td>
                                 <td><h5><span class="badge badge-pill badge-success">{{$reservation->reservation_status}}</h5></span></td>
-                                <td>
-                                    <a href="{{route('payment.index', $reservation->reservation_id)}}"><button type="button" class="btn btn-info">Pay</button></a>        
-                                </td>
                                 <td>
                                     <div class="btn-group" role="group">
                                             <a href="{{route('reservation.edit', $reservation)}}"><button type="button" class="btn btn-primary">Edit</button></a>        
@@ -72,6 +65,6 @@
             </div>
         </div>
     </div>
-
+</div>
     
 @endsection

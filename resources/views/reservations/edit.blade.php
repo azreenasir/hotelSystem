@@ -99,20 +99,6 @@
                             @enderror
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="reservation_status" class="col-md-4 col-form-label text-md-end">Reservation Status</label>
-    
-                            <div class="col-md-6">
-                                <input id="reservation_status" type="text" class="form-control @error('reservation_status') is-invalid @enderror" name="reservation_status" value="{{ $reservation->reservation_status }}" required autocomplete="reservation_status" autofocus>
-    
-                                @error('reservation_status')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

@@ -26,13 +26,14 @@ class ReservationController extends Controller
         return view('reservations.index', compact('reservations','rooms', 'roomtypes', 'guests'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
+        $checkin_date = $request->checkin_date;
+        $checkout_date = $request->checkout_date;
+        $rooms = $request->rooms_id;
         $guests = Guest::get();
-        $rooms = Room::get();
-        $roomtypes = Roomtype::get();
 
-        return view('reservations.create', compact('rooms', 'roomtypes', 'guests'));
+        return view('reservations.create', compact('rooms', 'guests', 'checkin_date', 'checkout_date'));
     }
 
     public function store(Request $request)
@@ -40,18 +41,20 @@ class ReservationController extends Controller
 
         $reservation = $request->all();
 
-        $reservation['reservation_status'] = strtolower('pending');
+        $reservation['reservation_status'] = strtolower('Booked');
         $reservation['guest_id'] = request('guest');
         $reservation['rooms_id'] = request('rooms');      
         
-        if(Reservation::create($reservation))
+        if($reserve = Reservation::create($reservation))
         {
             session()->flash('success', 'Reservation has been added');
         }else{
             session()->flash('error', 'Failed to add new Reservation');
         }
-        
-        return redirect()->route('reservation.index');
+
+        $reservation_id = $reserve->reservation_id;
+
+        return redirect()->route('payment.index', $reservation_id);
     }
 
     public function edit(Reservation $reservation)
@@ -93,6 +96,22 @@ class ReservationController extends Controller
         }
 
         return redirect()->route('reservation.index');
+    }
+
+    public function roomAvailable(Request $request)
+    {
+        $time_from = $request->checkin_date;
+        $time_to = $request->checkout_date;
+
+        $rooms = Room::whereNotIn('rooms_id', function($query) use ($time_from, $time_to) {
+            $query->from('reservations')
+             ->select('rooms_id')
+             ->where('checkin_date', '<', $time_to)
+                ->where('checkout_date', '>', $time_from);
+         })->get();
+
+         return $rooms;
+
     }
 
     

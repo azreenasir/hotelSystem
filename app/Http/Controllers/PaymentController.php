@@ -30,7 +30,7 @@ class PaymentController extends Controller
         if(Payment::create($payment)){
             
             $results = Reservation::where('reservation_id', request('reservation'))->first(); // this point is the most important to change
-            $results->reservation_status = 'Paid';
+            $results->reservation_status = 'Booked Successful';
             $results->save();
 
             session()->flash('success', 'Reservation has been successfully pay');

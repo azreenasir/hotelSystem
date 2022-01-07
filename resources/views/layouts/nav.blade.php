@@ -18,11 +18,11 @@
         <li class="nav-item {{request()->is('guest') ? 'active' : ''}}">
           <a class="nav-link" href="{{route('guest.index')}}">Guest</a>
         </li>
-        <li class="nav-item {{request()->is('reservation') ? 'active' : ''}}">
+        {{-- <li class="nav-item {{request()->is('reservation') ? 'active' : ''}}">
           <a class="nav-link" href="{{route('reservation.index')}}">Reservation</a>
-        </li>
+        </li> --}}
         <li class="nav-item {{request()->is('room-available') ? 'active' : ''}}">
-          <a class="nav-link" href="{{route('search.index')}}">Check Booked Room</a>
+          <a class="nav-link" href="{{route('search.index')}}">Check Available Room</a>
         </li>
         @endcan
       </ul>
@@ -41,6 +41,7 @@
             <a class="dropdown-item" href="{{route('admin.users.index')}}">
               User Management
             </a>
+            <a class="dropdown-item" href="{{route('reservation.index')}}">Reservation</a>
           @endcan
         </div>
     </li>

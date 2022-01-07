@@ -7,14 +7,13 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div>
-            <h4>Search Booked Room</h4>
+            <h4>Search Available Room</h4>
         </div>
     </div>
     <hr>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-
                 <div class="card-body">
                     <form method="post" action="{{route('search.result')}}">
                         @csrf
@@ -23,7 +22,7 @@
                             <label for="time_from" class="col-md-4 col-form-label text-md-end">Check In Date: </label>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
-                                    <input type="text" id="datepicker1" class="form-control" name="time_from">
+                                    <input type="text" id="datepicker1" class="form-control" name="checkin_date">
                                 </div>
                             </div>
 
@@ -38,7 +37,7 @@
                             <label for="time_to" class="col-md-4 col-form-label text-md-end">Check Out Date: </label>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
-                                    <input type="text" id="datepicker2" class="form-control" name="time_to">
+                                    <input type="text" id="datepicker2" class="form-control" name="checkout_date">
                                 </div>
                             </div>
 
