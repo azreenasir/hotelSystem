@@ -39,7 +39,7 @@
                             <label for="checkin_date" class="col-md-4 col-form-label text-md-end">Check In Date: </label>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
-                                    <input type="text" id="datepicker1" class="form-control" name="checkin_date" value="{{$checkin_date, old('checkin_date')}}" >
+                                    <input type="text" id="datepicker1" class="form-control" name="checkin_date" value="{{$checkin_date, old('checkin_date')}}" readonly >
                                 </div>
                             </div>
 
@@ -53,7 +53,7 @@
                             <label for="checkout_date" class="col-md-4 col-form-label text-md-end">Check Out Date: </label>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
-                                    <input type="text" id="datepicker2" class="form-control" name="checkout_date" value="{{$checkout_date, old('checkout_date')}}" >
+                                    <input type="text" id="datepicker2" class="form-control" name="checkout_date" value="{{$checkout_date, old('checkout_date')}}" readonly >
                                 </div>
                             </div>
 
@@ -70,8 +70,8 @@
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <select class="custom-select select2room" id="rooms_id" name="rooms" data-width="100%">
-                                        <option selected disabled>Choose...</option>
-                                            <option value="{{$rooms, old('rooms_id')}}" selected >ROOM NO: {{$rooms}}</option>
+                                        <option disabled>Choose...</option>
+                                            <option selected value="{{$rooms, old('rooms_id')}}" selected >ROOM NO: {{$rooms}}</option>
                                     </select>
                                 </div>
 
@@ -113,29 +113,5 @@
         </div>
     </div>
 </div>
-    
-@endsection
-
-
-@section('scripts')
-
-<script>
-    $(function() {
-        $('select[name=rooms]').change(function() {
-
-            var url = '{{ url('country') }}' + $(this).val() + '/states/';
-
-            $.get(url, function(data) {
-                var select = $('form select[name= state]');
-
-                select.empty();
-
-                $.each(data,function(key, value) {
-                    select.append('<option value=' + value.id + '>' + value.name + '</option>');
-                });
-            });
-        });
-    });
-</script>
     
 @endsection

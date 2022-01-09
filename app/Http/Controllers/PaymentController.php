@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Guest;
 use App\Models\Payment;
 use App\Models\Reservation;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\Console\Input\Input;
@@ -26,6 +27,10 @@ class PaymentController extends Controller
 
         $payment['reservation_id'] = request('reservation');
         $payment['guest_id'] = request('guest');
+        $date_now =  Carbon::now()->format('Y-m-d');
+        $payment['payment_date'] = $date_now;
+
+        
 
         if(Payment::create($payment)){
             
@@ -39,6 +44,8 @@ class PaymentController extends Controller
         }
         
         return redirect()->route('reservation.index');
+
+
     }
 
     /**

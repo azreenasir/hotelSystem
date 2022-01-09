@@ -11,7 +11,7 @@ class Payment extends Model
 
     protected $primaryKey = 'payment_id';
 
-    protected $fillable = ['payment_desc', 'total_price', 'reservation_id', 'guest_id'];
+    protected $fillable = ['payment_desc', 'total_price', 'reservation_id', 'guest_id', 'payment_date'];
 
     public function reservation()
     {

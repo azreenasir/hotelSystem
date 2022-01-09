@@ -19,6 +19,7 @@ class CreatePaymentsTable extends Migration
             $table->string('total_price');
             $table->foreignId('guest_id')->references('guest_id')->on('guests')->onDelete('cascade');
             $table->foreignId('reservation_id')->references('reservation_id')->on('reservations')->onDelete('cascade');
+            $table->date('payment_date');
             $table->timestamps();
         });
     }

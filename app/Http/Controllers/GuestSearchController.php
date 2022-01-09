@@ -2,23 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reservation;
 use App\Models\Room;
 use Illuminate\Http\Request;
 
-class SearchAvailableRoomController extends Controller
+class GuestSearchController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    public function index()
-    {
-        $rooms = Room::get();
-        return view('search.search', compact('rooms'));
-    }
-
     public function result(Request $request)
     {
         $checkin_date = $request->checkin_date;
@@ -31,8 +19,7 @@ class SearchAvailableRoomController extends Controller
                 ->where('checkout_date', '>', $checkin_date);
          })->get();
 
-        return view('search.result', compact('rooms', 'checkout_date', 'checkin_date'));
+        return view('roomavailable', compact('rooms', 'checkout_date', 'checkin_date'));
 
     }
-
 }

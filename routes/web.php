@@ -43,13 +43,20 @@ Route::delete('/reservation/delete/{reservation:reservation_id}', 'App\Http\Cont
 
 
 // room availability route
-Route::get('/room-available', 'App\Http\Controllers\SearchAvailableRoomController@result')->name('search.index');
+Route::get('/room-available', 'App\Http\Controllers\SearchAvailableRoomController@index')->name('search.index');
 Route::post('/room-available/check', 'App\Http\Controllers\SearchAvailableRoomController@result')->name('search.result');
+Route::post('/room-available/result', 'App\Http\Controllers\GuestSearchController@result')->name('guest.search');
+
 
 
 // payments route
 Route::get('/payment/reservation/{reservation:reservation_id}', 'App\Http\Controllers\PaymentController@index')->name('payment.index');
 Route::post('/payment/reservation/', 'App\Http\Controllers\PaymentController@store')->name('payment.store');
+
+// sales route
+Route::get('/sales', 'App\Http\Controllers\SalesController@index')->name('sales.index');
+Route::post('/sales/result', 'App\Http\Controllers\SalesController@totalSales')->name('sales.total');
+
 
 
 // admin route

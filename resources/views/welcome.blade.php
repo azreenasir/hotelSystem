@@ -72,6 +72,68 @@
 
     {{-- END OF ABOUT --}}
 
+    {{-- ROOM AVAILABLE --}}
+    <div class="row m-3" style="background-color: #FFAE42">
+        <div class="col-md-12 mt-4 my-4">
+            <h1 class="page-header">
+                <center>ROOM AVAILABLE</center>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4><center>Check Room Available</center></h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="{{route('guest.search')}}">
+                        @csrf
+
+                        <div class="row mb-3">
+                            <label for="time_from" class="col-md-4 col-form-label text-md-end">Check In Date: </label>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="datepicker1" class="form-control" name="checkin_date">
+                                </div>
+                            </div>
+
+                            @error('time_from')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="time_to" class="col-md-4 col-form-label text-md-end">Check Out Date: </label>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="datepicker2" class="form-control" name="checkout_date">
+                                </div>
+                            </div>
+
+                            @error('time_to')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-5">
+                                <button type="submit" class="btn btn-primary">
+                                    Check
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
      {{-- SERVICES --}}
 
     <div class="row m-3" style="background-color: #FFAE42">
