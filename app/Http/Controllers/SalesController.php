@@ -27,7 +27,7 @@ class SalesController extends Controller
         $date_from = Carbon::parse($time_from)->format('Y-m-d');
         $date_to = Carbon::parse($time_to)->format('Y-m-d');
 
-        $price = Payment::select('payment_id','total_price', 'payment_date')
+        $price = Payment::select('payment_id','total_price', 'payment_date', 'payment_desc')
         ->whereBetween('payment_date', [$date_from, $date_to])
         ->get();
         

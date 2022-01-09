@@ -4,8 +4,8 @@
 
 @section('content')
 <div class="container-fluid">
-    <div>
-        <h4>Types Of Room</h4>
+    <div class="row justify-content-center">
+        <h2>TYPES OF ROOM</h2>
     </div>
     <hr>
     
@@ -17,7 +17,9 @@
                         <div class="card-header">
                             <center>
                                 <b>
-                                    {{ $room->roomtypes_name}}
+                                    <h3>
+                                        {{ $room->roomtypes_name}}
+                                    </h3>
                                 </b>
                             </center>
                         </div>
@@ -32,12 +34,16 @@
 
                             <div>
                                 <center>
-                                    RM: {{$room->roomtypes_price}} FOR 1 NIGHT
+                                    <h4>
+                                        RM: {{$room->roomtypes_price}} FOR 1 NIGHT
+                                    </h4>
                                 </center>
                             </div>
                             <div class="m-2">
                                 <center>
-                                    <a href="/room/{{$room->roomtypes_id}}">View Room</a>
+                                    <h4>
+                                        <a href="/room/{{$room->roomtypes_id}}" class="btn btn-info">View Room</a>
+                                    </h4>
                                 </center>
                             </div>
                             

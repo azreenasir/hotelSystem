@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Sales</div>
 
@@ -36,14 +36,18 @@
                     <table class="table table-striped table-dark">
                         <thead>
                             <tr class="text-center">
+                                <th scope="col">Payment ID</th>
                                 <th scope="col">Payment Date</th>
+                                <th scope="col">Payment Desc</th>
                                 <th scope="col">Sales</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($price as $prices)
                             <tr class="text-center">
+                                <td>{{$prices->payment_id}}</td>
                                 <td>{{date('d-m-Y', strtotime($prices->payment_date))}}</td>
+                                <td>{{Str::limit($prices->payment_desc, 11, '')}}</td>
                                 <td>RM {{$prices->total_price}}</td>
                             </tr>
                             @endforeach

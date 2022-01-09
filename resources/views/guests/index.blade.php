@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row justify-content-between ml-4 mr-4">
         <div>
-            <h4>List of Guest</h4>
+            <h3>List of Guest</h3>
         </div>
         <div>
             <a href="{{route('guest.create')}}" class="btn btn-primary">Add New Guest</a>
@@ -17,30 +17,30 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    Guest
+                    <center><b><h3>Guest List</h3></b></center>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped table-dark">
                         <thead class="text-center">
                             <tr>
-                            <th scope="col"># ID</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Contact Number</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col"><h5># ID</h5></th>
+                            <th scope="col"><h5>First Name</h5></th>
+                            <th scope="col"><h5>Last Name</h5></th>
+                            <th scope="col"><h5>Address</h5></th>
+                            <th scope="col"><h5>Contact Number</h5></th>
+                            <th scope="col"><h5>Email</h5></th>
+                            <th scope="col"><h5>Actions</h5></th>
                             </tr>
                         </thead>
                         <tbody class="text-center">
                             @foreach ($guests as $guest)
                             <tr>
-                                <th scope="row">{{$guest->guest_id}}</th>
-                                <td>{{$guest->first_name}}</td>
-                                <td>{{$guest->last_name}}</td>
-                                <td>{{$guest->address}}</td>
-                                <td>{{$guest->contact_number}}</td>
-                                <td>{{$guest->email}}</td>
+                                <th scope="row"><h5>{{$guest->guest_id}}</h5></th>
+                                <td><h5>{{$guest->first_name}}</h5></td>
+                                <td><h5>{{$guest->last_name}}</h5></td>
+                                <td><h5>{{$guest->address}}</h5></td>
+                                <td><h5>{{$guest->contact_number}}</h5></td>
+                                <td><h5>{{$guest->email}}</h5></td>
                                 <td>
                                     <div class="btn-group" role="group">
                                         <div class="col-md-4">
