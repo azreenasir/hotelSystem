@@ -30,11 +30,6 @@ class SalesController extends Controller
         $price = Payment::select('payment_id','total_price', 'payment_date', 'payment_desc')
         ->whereBetween('payment_date', [$date_from, $date_to])
         ->get();
-        
-        $count = count($price);
-        if($count == 0){
-            $count = 2;
-        }
 
         $sum = 0;
         foreach ($price as $p) {
@@ -44,7 +39,7 @@ class SalesController extends Controller
             $sum += $total;
         }
 
-        return view('reports.sales', compact('price', 'date_from', 'date_to', 'sum', 'count'));
+        return view('reports.sales', compact('price', 'date_from', 'date_to', 'sum'));
 
         
     }

@@ -47,7 +47,7 @@
 
     <div class="row m-3" style="background-color: #FFAE42">
         <div class="col-md-12 mt-4 my-4">
-            <h1 class="page-header">
+            <h1 class="page-header" style="font-family: 'Bernard MT'">
                 <center>ABOUT</center>
             </h1>
         </div>
@@ -55,8 +55,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="jumbotron">
-                <h1 class="display-5">HELLOTEL</h1>
-                <p class="lead">Where your vacations dreams start.</p>
+                <h1 class="display-5" >HELLOTEL</h1>
+                <p class="lead" >Where your vacations dreams start.</p>
                 <hr class="my-4">
                 <p>
                     HelloTel is a great place for rest and business.<br>
@@ -75,7 +75,7 @@
     {{-- ROOM AVAILABLE --}}
     <div class="row m-3" style="background-color: #FFAE42">
         <div class="col-md-12 mt-4 my-4">
-            <h1 class="page-header">
+            <h1 class="page-header" style="font-family: 'Bernard MT'">
                 <center>ROOM AVAILABLE</center>
             </h1>
         </div>
@@ -92,7 +92,7 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="time_from" class="col-md-4 col-form-label text-md-end">Check In Date: </label>
+                            <label for="time_from" class="col-md-4 col-form-label text-md-end"><h5><b>Check In Date: </b></h5></label>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <input type="text" id="datepicker1" class="form-control" name="checkin_date">
@@ -107,7 +107,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="time_to" class="col-md-4 col-form-label text-md-end">Check Out Date: </label>
+                            <label for="time_to" class="col-md-4 col-form-label text-md-end"><h5><b>Check Out Date: </b></h5></label>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <input type="text" id="datepicker2" class="form-control" name="checkout_date">
@@ -138,7 +138,7 @@
 
     <div class="row m-3" style="background-color: #FFAE42">
         <div class="col-md-12 mt-4 my-4">
-            <h1 class="page-header">
+            <h1 class="page-header" style="font-family: 'Bernard MT'">
                 <center>OUR SERVICES</center>
             </h1>
         </div>
@@ -180,7 +180,7 @@
 
     <div class="row m-3" style="background-color: #FFAE42">
         <div class="col-md-12 mt-4 my-4" >
-            <h1 class="page-header">
+            <h1 class="page-header" style="font-family: 'Bernard MT'">
                 <center >CONTACT</center>
             </h1>
         </div>
@@ -188,8 +188,8 @@
     <div class="row m-2">
         <div class="col-md-4 ml-2">
             <div class="card">
-                <div class="card-header">
-                    <center><h1>Contact Information</h1></center>
+                <div class="card-header" style="font-family: 'Agency FB'">
+                    <center><h1><b>Contact Information</b></h1></center>
                 </div>
                 <div class="card-body">
                     <p ><strong>Phone :</strong>+(06) 999 222 333</p>

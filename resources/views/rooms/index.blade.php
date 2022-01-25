@@ -5,7 +5,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <h2>TYPES OF ROOM</h2>
+        <h2 style="font-family: 'Franklin Gothic'">TYPES OF ROOM</h2>
     </div>
     <hr>
     
@@ -17,7 +17,7 @@
                         <div class="card-header">
                             <center>
                                 <b>
-                                    <h3>
+                                    <h3 style="font-family: 'Bernard MT'">
                                         {{ $room->roomtypes_name}}
                                     </h3>
                                 </b>
@@ -41,8 +41,8 @@
                             </div>
                             <div class="m-2">
                                 <center>
-                                    <h4>
-                                        <a href="/room/{{$room->roomtypes_id}}" class="btn btn-info">View Room</a>
+                                    <h4 style="font-family: 'Franklin Gothic'">
+                                        <a  href="/room/{{$room->roomtypes_id}}" class="btn btn-info">View Room</a>
                                     </h4>
                                 </center>
                             </div>

@@ -53,10 +53,14 @@ Route::post('/room-available/result', 'App\Http\Controllers\GuestSearchControlle
 Route::get('/payment/reservation/{reservation:reservation_id}', 'App\Http\Controllers\PaymentController@index')->name('payment.index');
 Route::post('/payment/reservation/', 'App\Http\Controllers\PaymentController@store')->name('payment.store');
 
+
 // sales route
 Route::get('/sales', 'App\Http\Controllers\SalesController@index')->name('sales.index');
 Route::post('/sales/result', 'App\Http\Controllers\SalesController@totalSales')->name('sales.total');
 
+
+// room report route
+Route::get('/reportrooms', 'App\Http\Controllers\ChartController@pieChart')->name('pie.chart');
 
 
 // admin route

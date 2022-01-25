@@ -7,13 +7,13 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div>
-            <h3><b>Search Available Room</b></h3>
+            <h3 style="font-family: 'Franklin Gothic'"><b>Search Available Room</b></h3>
         </div>
     </div>
     <hr>
     <div class="row justify-content-center">
         <div class="col-md-7">
-            <div class="card">
+            <div class="card  bg-light mb-3">
                 <div class="card-body">
                     <form method="post" action="{{route('search.result')}}">
                         @csrf
@@ -22,7 +22,7 @@
                             <label for="time_from" class="col-md-4 col-form-label text-md-end"><h5><b> Check In Date : </b></h5></label>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
-                                    <input type="text" id="datepicker1" class="form-control" name="checkin_date">
+                                    <input type="text" id="datepicker1" class="form-control" name="checkin_date" required>
                                 </div>
                             </div>
 
@@ -37,7 +37,7 @@
                             <label for="time_to" class="col-md-4 col-form-label text-md-end"><h5><b>Check Out Date : </b></h5></label>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
-                                    <input type="text" id="datepicker2" class="form-control" name="checkout_date">
+                                    <input type="text" id="datepicker2" class="form-control" name="checkout_date" required>
                                 </div>
                             </div>
 
@@ -50,8 +50,8 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-5">
-                                <button type="submit" class="btn btn-primary">
-                                    Search
+                                <button type="submit" class="btn btn-primary" >
+                                    <h5 >Search</h5>
                                 </button>
                             </div>
                         </div>

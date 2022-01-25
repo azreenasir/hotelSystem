@@ -6,18 +6,18 @@
 <div class="container">
     <div class="d-flex justify-content-between m-2">
         <div>
-            <h4>ROOM: {{$roomtype->roomtypes_name}}</h4>
+            <h3 style="font-family: 'Franklin Gothic'">ROOM: {{$roomtype->roomtypes_name}}</h3>
             
         </div>
         <div>
-            <a href="/room" class="btn btn-primary">Back</a>
+            <a style="font-family: 'Franklin Gothic'" href="/room" class="btn btn-primary">Back</a>
         </div>
     </div>
     <hr>
 
     <div class="card">
         <div class="card-header">
-            <h1>
+            <h1 style="font-family: 'Bernard MT'">
                 <center>
                     {{$roomtype->roomtypes_name}}
                 </center>

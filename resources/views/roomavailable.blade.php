@@ -17,7 +17,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row mb-3">
-                        <label for="time_from" class="col-md-4 col-form-label text-md-end">Check In Date: </label>
+                        <label for="time_from" class="col-md-4 col-form-label text-md-end"><h4>Check In Date:</h4> </label>
                         <div class="col-md-6">
                             <div class="input-group mb-3">
                                 <input type="text" id="datepicker1" class="form-control" name="checkin_date" value="{{$checkin_date, old('checkin_date')}}" readonly>

@@ -46,7 +46,7 @@ class GuestController extends Controller
             session()->flash('error', 'Failed to add new guest');
         }
 
-        return redirect()->route('guest.index');
+        return back();
     }
 
     public function edit(Guest $guest)
@@ -64,8 +64,6 @@ class GuestController extends Controller
         $guest->address = $request->address;
         $guest->contact_number = $request->contact_number;
         $guest->email = $request->email;
-
-        // checkin date $ checkout date bug (dateformat)
 
         if($guest->save())
         {
