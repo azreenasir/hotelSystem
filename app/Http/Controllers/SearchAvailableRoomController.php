@@ -29,7 +29,7 @@ class SearchAvailableRoomController extends Controller
              ->select('rooms_id')
              ->where('checkin_date', '<', $checkout_date)
                 ->where('checkout_date', '>', $checkin_date);
-         })->get();
+         })->orderBy('rooms_id', 'ASC')->get();
 
         return view('search.result', compact('rooms', 'checkout_date', 'checkin_date'));
 

@@ -11,7 +11,7 @@ class Reservation extends Model
 
     protected $primaryKey = 'reservation_id';
 
-    protected $fillable = ['guest_id', 'num_of_guest', 'checkin_date', 'checkout_date', 'rooms_id', 'reservation_status'];
+    protected $fillable = ['guest_id', 'num_of_guest', 'checkin_date', 'checkout_date', 'rooms_id', 'reservation_status', 'employee_id'];
 
 
     public function guest()

@@ -43,7 +43,8 @@ class ReservationController extends Controller
 
         $reservation['reservation_status'] = strtolower('Booked');
         $reservation['guest_id'] = request('guest');
-        $reservation['rooms_id'] = request('rooms');      
+        $reservation['rooms_id'] = request('rooms'); 
+        $reservation['employee_id'] = \Auth::user()->id;    
         
         if($reserve = Reservation::create($reservation))
         {
@@ -74,7 +75,6 @@ class ReservationController extends Controller
         $reservation->checkin_date = $request->checkin_date;
         $reservation->checkout_date = $request->checkout_date;
         $reservation->num_of_guest = $request->num_of_guest;
-        $reservation->reservation_status = $request->reservation_status;
 
         if($reservation->save())
         {

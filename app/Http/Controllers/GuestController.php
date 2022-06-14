@@ -37,7 +37,7 @@ class GuestController extends Controller
             'last_name' => 'required|string|max:255',
             'address' => 'required|string|max:255',
             'contact_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:guests',
         ]);
 
         if(Guest::create($guest)){
@@ -59,6 +59,7 @@ class GuestController extends Controller
 
     public function update(Request $request, Guest $guest)
     {
+        
         $guest->first_name = $request->first_name;
         $guest->last_name = $request->last_name;
         $guest->address = $request->address;

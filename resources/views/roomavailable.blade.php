@@ -17,7 +17,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row mb-3">
-                        <label for="time_from" class="col-md-4 col-form-label text-md-end"><h4>Check In Date:</h4> </label>
+                        <label for="time_from" class="col-md-4 col-form-label text-md-end"><h5><b>Check In Date:</b></h5> </label>
                         <div class="col-md-6">
                             <div class="input-group mb-3">
                                 <input type="text" id="datepicker1" class="form-control" name="checkin_date" value="{{$checkin_date, old('checkin_date')}}" readonly>
@@ -32,7 +32,7 @@
                     </div>
             
                     <div class="row mb-3">
-                        <label for="time_to" class="col-md-4 col-form-label text-md-end">Check Out Date: </label>
+                        <label for="time_to" class="col-md-4 col-form-label text-md-end"><h5><b>Check Out Date:</b></h5> </label>
                         <div class="col-md-6">
                             <div class="input-group mb-3">
                                 <input type="text" id="datepicker2" class="form-control" name="checkout_date" value="{{$checkout_date, old('checkout_date')}}" readonly>
@@ -56,17 +56,17 @@
                     <table class="table table-striped table-dark">
                         <thead>
                         <tr class="text-center">
-                            <th scope="col">ID</th>
-                            <th scope="col">RoomType</th>
-                            <th scope="col">Max Person</th>
+                            <th scope="col"><h5><b>ID</b></h5></th>
+                            <th scope="col"><h5><b>RoomType</b></h5></th>
+                            <th scope="col"><h5><b>Max Person</b></h5></th>
                         </tr>
                         </thead>
                         <tbody>
                             @foreach ($rooms as $room)
                             <tr class="text-center">
-                                <b><th scope="row">{{$room->rooms_id}}</th></b>
-                                <td>{{$room->roomtype->roomtypes_name}}</td>
-                                <td>{{$room->roomtype->roomtypes_size}}</td>
+                                <b><th scope="row"><h5>{{$room->rooms_id}}</h5></th></b>
+                                <td><h5><b>{{$room->roomtype->roomtypes_name}}</b></h5></td>
+                                <td><h5><b>{{$room->roomtype->roomtypes_size}}</b></h5></td>
                             </tr>
                             @endforeach
                         </tbody>

@@ -21,7 +21,7 @@
                     @method('PUT')
 
                     <div class="row mb-3">
-                        <label for="first_name" class="col-md-4 col-form-label text-md-end">First Name</label>
+                        <label for="first_name" class="col-md-4 col-form-label text-md-end"><h5><b>First Name</b></h5></label>
 
                         <div class="col-md-6">
                             <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ $user->first_name }}" required autocomplete="first_name" autofocus>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="last_name" class="col-md-4 col-form-label text-md-end">Last Name</label>
+                        <label for="last_name" class="col-md-4 col-form-label text-md-end"><h5><b>Last Name</b></h5></label>
 
                         <div class="col-md-6">
                             <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ $user->last_name }}" required autocomplete="last_name" autofocus>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="address" class="col-md-4 col-form-label text-md-end">Address</label>
+                        <label for="address" class="col-md-4 col-form-label text-md-end"><h5><b>Address</b></h5></label>
 
                         <div class="col-md-6">
                             <textarea id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" required autocomplete="address" autofocus>{{ $user->address }}</textarea>
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="phone_number" class="col-md-4 col-form-label text-md-end">Phone Number</label>
+                        <label for="phone_number" class="col-md-4 col-form-label text-md-end"><h5><b>Phone Number</b></h5></label>
 
                         <div class="col-md-6">
                             <input id="phone_number" type="number" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ $user->phone_number }}" required autocomplete="phone_number" autofocus>
@@ -74,7 +74,7 @@
                     </div>
 
                     <div class="row mb-3">
-                        <label for="email" class="col-md-4 col-form-label text-md-end">Email</label>
+                        <label for="email" class="col-md-4 col-form-label text-md-end"><h5><b>Email</b></h5></label>
 
                         <div class="col-md-6">
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email">
@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="row mb-3">
-                        <label for="roles" class="col-md-4 col-form-label text-md-end">Roles</label>
+                        <label for="roles" class="col-md-4 col-form-label text-md-end"><h5><b>Roles</b></h5></label>
                         <div class="col-md-6">
                             @foreach ($roles as $role)
                                 <div class="form-check">
@@ -99,7 +99,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary"><h5><b>Update</b></h5></button>
                    </form>
                 </div>
             </div>

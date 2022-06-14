@@ -21,6 +21,7 @@ class CreateReservationsTable extends Migration
             $table->string('reservation_status');
             $table->foreignId('guest_id')->references('guest_id')->on('guests')->onDelete('cascade');
             $table->foreignId('rooms_id')->references('rooms_id')->on('rooms')->onDelete('cascade');
+            $table->foreignId('employee_id')->references('id')->on('employees')->onDelete('cascade');
             $table->timestamps();
         });
     }
