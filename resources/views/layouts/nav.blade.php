@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
-    <a class="navbar-brand" href="/" style="font-family: 'Harlow Solid'">
-      <img src="/images/logo.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-      <b>H e l l o T e l</b>
+    <a class="navbar-brand" href="/" style="font-family: 'Dekko'">
+      <b>HReS </b>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

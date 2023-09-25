@@ -133,7 +133,7 @@
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <select class="custom-select select2guest" id="guest_id" name="guest" data-width="100%" required>
-                                        <option value="" disabled  selected>Select your option</option>
+                                        <option disabled  selected>Select your option</option>
                                         @foreach ($guests as $guest)
                                             <option value="{{$guest->guest_id}}">{{$guest->first_name}} {{$guest->last_name}}</option>
                                         @endforeach
